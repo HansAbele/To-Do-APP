@@ -1,3 +1,4 @@
+/* Variables */
 const taskForm = document.getElementById("task-form");
 const confirmCloseDialog = document.getElementById("confirm-close-dialog");
 const openTaskFormBtn = document.getElementById("open-task-form-btn");
@@ -13,7 +14,7 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 
-/* Funct */
+/* Functions */
 const removeSpecialChars = (val) => {
   return val.trim().replace(/[^A-Za-z0-9\-\s]/g, '')
 }
