@@ -16,8 +16,8 @@ let currentTask = {};
 
 /* Functions */
 const removeSpecialChars = (val) => {
-  return val.trim().replace(/[^A-Za-z0-9\-\s]/g, '')
-}
+  return val.trim().replace(/[^A-Za-z0-9\-\s]/g, '');
+};
 
 const addOrUpdateTask = () => {
    if(!titleInput.value.trim()){
@@ -70,7 +70,7 @@ const deleteTask = (buttonEl) => {
   buttonEl.parentElement.remove();
   taskData.splice(dataArrIndex, 1);
   localStorage.setItem("data", JSON.stringify(taskData));
-}
+};
 
 const editTask = (buttonEl) => {
     const dataArrIndex = taskData.findIndex(
@@ -95,7 +95,7 @@ const reset = () => {
   descriptionInput.value = "";
   taskForm.classList.toggle("hidden");
   currentTask = {};
-}
+};
 
 if (taskData.length) updateTaskContainer();
 
